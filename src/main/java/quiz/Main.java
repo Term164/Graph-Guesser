@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.stage.Stage;
 
 
@@ -26,9 +28,22 @@ public class Main extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        //Define where we get the fxml resources from (fxml describes the look of the application)
         Parent root = FXMLLoader.load(getClass().getResource("/main.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+
+        //Basic setup for the application
+        primaryStage.setTitle("Math Quiz");
+        primaryStage.setScene(new Scene(root,1024 ,600 ));
+
+        //Setting the application to be fullScreen
+        primaryStage.setMaximized(true);
+        primaryStage.setFullScreen(true);
+
+        //Setting the application bounds here
+        primaryStage.setMinWidth(1024);
+        primaryStage.setMinHeight(600);
+
+        //Displaying the application
         primaryStage.show();
     }
 }
