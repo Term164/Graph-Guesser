@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 
@@ -32,8 +33,9 @@ public class Main extends Application{
         Parent root = FXMLLoader.load(getClass().getResource("/main.fxml"));
 
         //Basic setup for the application
-        primaryStage.setTitle("Math Quiz");
-        primaryStage.setScene(new Scene(root,1024 ,600 ));
+        primaryStage.setTitle("Graph Guesser");
+        primaryStage.getIcons().add(new Image("/Images/GG_icon.png"));
+        primaryStage.setScene(new Scene(root,1024 ,700 ));
 
         //Setting the application to be fullScreen
         primaryStage.setMaximized(true);
@@ -41,7 +43,7 @@ public class Main extends Application{
 
         //Setting the application bounds here
         primaryStage.setMinWidth(1024);
-        primaryStage.setMinHeight(600);
+        primaryStage.setMinHeight(700);
 
         //Displaying the application
         primaryStage.show();

@@ -17,8 +17,8 @@ dependencies {
 }
 
 javafx{
-    modules = ['javafx.controls', 'javafx.fxml']
-    version = '11.0.2'
+    modules = ['javafx.controls', 'javafx.fxml','javafx.web']
+    version = "11.0.2"
 }
 
 mainClassName = 'quiz.Main'
